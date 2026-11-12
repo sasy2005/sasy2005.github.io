@@ -1,0 +1,460 @@
+[
+  {
+    "id": "dir-pub",
+    "materia": "Diritto pubblico e dell'economia",
+    "anno": 1,
+    "semestre": 2,
+    "cfu": 9,
+    "docente": "Auretta Benedetti",
+    "email": "auretta.benedetti@unimib.it",
+    "esame": "Orale",
+    "esame_dettaglio": "Orale sugli argomenti del corso e sul manuale",
+    "libro": "Camerlengo, Furlan – Lezioni di diritto costituzionale vivente, 2ª ed., Cedam 2023",
+    "programma": "Capitoli concordati: 3, 5, 6, 8, 9, 10, 11, 12, 14, 15",
+    "link": "https://elearning.unimib.it/course/view.php?id=68994",
+    "ordine": 1,
+    "appelli": [
+      {
+        "data": "2027-01-14",
+        "ora": "09:00",
+        "tipo": "esame orale",
+        "aula": "U1-11"
+      },
+      {
+        "data": "2027-02-10",
+        "ora": "09:00",
+        "tipo": "esame orale",
+        "aula": "U4-07"
+      },
+      {
+        "data": "2027-04-05",
+        "ora": "14:30",
+        "tipo": "esame orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "mat-gen",
+    "materia": "Matematica generale",
+    "anno": 1,
+    "semestre": 1,
+    "cfu": 9,
+    "docente": "Ilaria Foroni",
+    "email": "ilaria.foroni@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto 2 ore (5 esercizi + 2 domande di teoria), orale facoltativo",
+    "libro": "Guerraggio – Matematica (Pearson); Scovenna, Grassi – Esercizi e temi d'esame (Cedam)",
+    "programma": "Funzioni, limiti, serie, derivate, studio di funzione, due variabili, integrali",
+    "link": "https://elearning.unimib.it/course/view.php?id=68999",
+    "ordine": 2,
+    "appelli": [
+      {
+        "data": "2027-01-13",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U9-06"
+      },
+      {
+        "data": "2027-02-02",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U6-08"
+      },
+      {
+        "data": "2027-04-07",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "macro",
+    "materia": "Macroeconomia e politiche economiche",
+    "anno": 2,
+    "semestre": 2,
+    "cfu": 12,
+    "docente": "Claudio Morana",
+    "email": "claudio.morana@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto, 18 domande (12 chiuse, 6 aperte); orale su richiesta",
+    "libro": "Mankiw – Macroeconomia, 7ª ed., Zanichelli 2024",
+    "programma": "Lungo e breve periodo, IS-LM e AD-AS, UEM, debito pubblico, crescita (Solow, Romer, Aghion-Howitt)",
+    "link": "https://elearning.unimib.it/course/view.php?id=68987",
+    "ordine": 3,
+    "appelli": []
+  },
+  {
+    "id": "mat-fin",
+    "materia": "Matematica finanziaria (Metodi mat. e stat. 1)",
+    "anno": 2,
+    "semestre": 1,
+    "cfu": 6,
+    "docente": "Rosanna Grassi",
+    "email": "rosanna.grassi@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto con esercizi e teoria; prevista una prova parziale",
+    "libro": "Bertocchi – Manuale modulare di metodi matematici, Mod. 4: Algebra lineare (Giappichelli)",
+    "programma": "Algebra lineare: vettori, matrici, determinante, inversa, rango, sistemi lineari",
+    "link": "https://elearning.unimib.it/course/view.php?id=68982",
+    "ordine": 4,
+    "appelli": [
+      {
+        "data": "2027-01-07",
+        "ora": "13:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U9-16"
+      },
+      {
+        "data": "2027-01-28",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U9-16"
+      },
+      {
+        "data": "2027-04-05",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "met-stat",
+    "materia": "Metodi statistici (Metodi mat. e stat. 1)",
+    "anno": 2,
+    "semestre": 1,
+    "cfu": 6,
+    "docente": "Andrea Ghiglietti, Erika Grammatica",
+    "email": "andrea.ghiglietti@unimib.it, erika.grammatica@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto (teoria + esercizi), orale facoltativo",
+    "libro": "Zenga – Modello probabilistico e variabili casuali; Elementi di inferenza statistica",
+    "programma": "Probabilità, variabili casuali, distribuzioni, valori medi, inferenza",
+    "link": "https://elearning.unimib.it/course/view.php?id=68984",
+    "ordine": 5,
+    "appelli": [
+      {
+        "data": "2027-01-19",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U9-16"
+      },
+      {
+        "data": "2027-02-09",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U9-16"
+      },
+      {
+        "data": "2027-04-09",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "micro",
+    "materia": "Microeconomia",
+    "anno": 1,
+    "semestre": 2,
+    "cfu": 9,
+    "docente": "Luca Stanca",
+    "email": "luca.stanca@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Prove intermedie o scritto finale, vero/falso + domande aperte",
+    "libro": "Katz, Rosen, Bollino, Morgan – Microeconomia, 7ª ed., McGraw-Hill 2024",
+    "programma": "Consumatore, imprese e costi, concorrenza, monopolio e oligopolio, teoria dei giochi, esternalità",
+    "link": "https://elearning.unimib.it/course/view.php?id=68996",
+    "ordine": 6,
+    "appelli": [
+      {
+        "data": "2027-01-14",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U1-10"
+      },
+      {
+        "data": "2027-02-04",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U1-02"
+      },
+      {
+        "data": "2027-04-08",
+        "ora": "13:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "org",
+    "materia": "Organizzazione aziendale",
+    "anno": 1,
+    "semestre": 2,
+    "cfu": 6,
+    "docente": "Francesco Paoletti",
+    "email": "francesco.paoletti@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto: test strutturato + domande aperte, nessuna prova in itinere",
+    "libro": "Daft – Organizzazione aziendale, 7ª ed., Maggioli (capp. 1, 3-5, 8-12)",
+    "programma": "Teorie organizzative, strutture, ambiente, tecnologie, cultura, cambiamento",
+    "link": "https://elearning.unimib.it/course/view.php?id=69005",
+    "ordine": 7,
+    "appelli": [
+      {
+        "data": "2027-01-11",
+        "ora": "09:30",
+        "tipo": "esame scritto",
+        "aula": "U1-13"
+      },
+      {
+        "data": "2027-02-01",
+        "ora": "09:30",
+        "tipo": "esame scritto",
+        "aula": "U4-05"
+      },
+      {
+        "data": "2027-04-05",
+        "ora": "14:30",
+        "tipo": "esame scritto",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "stat",
+    "materia": "Statistica",
+    "anno": 1,
+    "semestre": 2,
+    "cfu": 9,
+    "docente": "Lucio De Capitani",
+    "email": "lucio.decapitani1@unimib.it",
+    "esame": "Scritto + orale",
+    "esame_dettaglio": "Scritto al computer con Excel (3 esercizi) + orale obbligatorio",
+    "libro": "Zenga – Lezioni di statistica descrittiva, Giappichelli 2014",
+    "programma": "Statistica descrittiva univariata e multivariata",
+    "link": "https://elearning.unimib.it/course/view.php?id=69011",
+    "ordine": 8,
+    "appelli": [
+      {
+        "data": "2027-01-12",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U4-02"
+      },
+      {
+        "data": "2027-02-02",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "LAB14A1 (U14)"
+      },
+      {
+        "data": "2027-04-06",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "storia",
+    "materia": "Storia economica",
+    "anno": 1,
+    "semestre": 1,
+    "cfu": 6,
+    "docente": "Luca Mocarelli",
+    "email": "luca.mocarelli@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Prova intermedia + finale oppure prova completa al primo appello",
+    "libro": "Nessun manuale: letture e slide su e-learning (lezione 1)",
+    "programma": "Ambiente, popolazione, città; trasformazioni economiche viste da Milano",
+    "link": "https://elearning.unimib.it/course/view.php?id=69008",
+    "ordine": 9,
+    "appelli": [
+      {
+        "data": "2027-01-14",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U4-01"
+      },
+      {
+        "data": "2027-02-03",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U1-03"
+      },
+      {
+        "data": "2027-04-06",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "eng",
+    "materia": "English for Economics and Business",
+    "anno": 1,
+    "semestre": 1,
+    "cfu": 6,
+    "docente": "Paola Tosi",
+    "email": "paola.tosi1@unimib.it",
+    "esame": "Al computer",
+    "esame_dettaglio": "Al computer, 90 minuti: grammatica, reading, vocabolario business",
+    "libro": "Business Partner B2 – Coursebook, Pearson",
+    "programma": "Corporate culture, finance, digital business, ethics, sustainability e altri temi business",
+    "link": "https://elearning.unimib.it/course/view.php?id=69014",
+    "ordine": 10,
+    "appelli": [
+      {
+        "data": "2027-01-12",
+        "ora": "08:30",
+        "tipo": "esame scritto",
+        "aula": "U3-01, U3-05"
+      },
+      {
+        "data": "2027-02-01",
+        "ora": "08:30",
+        "tipo": "esame scritto",
+        "aula": "U6-06, U6-09"
+      },
+      {
+        "data": "2027-04-06",
+        "ora": "13:30",
+        "tipo": "esame scritto",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "dir-priv",
+    "materia": "Diritto privato e commerciale",
+    "anno": 2,
+    "semestre": 1,
+    "cfu": 9,
+    "docente": "Tommaso Ubertazzi",
+    "email": "tommaso.ubertazzi@unimib.it",
+    "esame": "Orale",
+    "esame_dettaglio": "Orale, colloquio sul programma",
+    "libro": "Paradiso – Manuale di diritto privato. Rapporti patrimoniali, 3ª ed. 2026 + Codice civile",
+    "programma": "Persone, famiglia, diritti reali, obbligazioni, contratti, responsabilità civile, società",
+    "link": "https://elearning.unimib.it/course/view.php?id=68969",
+    "ordine": 11,
+    "appelli": [
+      {
+        "data": "2027-01-29",
+        "ora": "08:30",
+        "tipo": "esame scritto",
+        "aula": "U3-02"
+      },
+      {
+        "data": "2027-02-17",
+        "ora": "08:30",
+        "tipo": "esame scritto",
+        "aula": "aula virtuale"
+      },
+      {
+        "data": "2027-04-09",
+        "ora": "13:30",
+        "tipo": "esame scritto",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "ec-az2",
+    "materia": "Economia aziendale 2",
+    "anno": 2,
+    "semestre": 1,
+    "cfu": 9,
+    "docente": "Mauro Martinelli",
+    "email": "mauro.martinelli@unimib.it",
+    "esame": "Scritto + orale",
+    "esame_dettaglio": "30 domande a scelta multipla + 1 aperta, poi orale (puoi tenere solo lo scritto)",
+    "libro": "Marchi – Contabilità di impresa e valori di bilancio, 6ª ed., Giappichelli",
+    "programma": "Contabilità generale, sottosistemi contabili, chiusura dei conti, bilancio d'esercizio",
+    "link": "https://elearning.unimib.it/course/view.php?id=68972",
+    "ordine": 12,
+    "appelli": [
+      {
+        "data": "2027-01-13",
+        "ora": "13:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U6-02"
+      },
+      {
+        "data": "2027-02-08",
+        "ora": "13:30",
+        "tipo": "esame scritto-orale",
+        "aula": "U6-05"
+      },
+      {
+        "data": "2027-04-08",
+        "ora": "08:30",
+        "tipo": "esame scritto-orale",
+        "aula": "aula virtuale"
+      }
+    ]
+  },
+  {
+    "id": "ec-pub",
+    "materia": "Economia pubblica",
+    "anno": 2,
+    "semestre": 2,
+    "cfu": 6,
+    "docente": "Riccarda Longaretti",
+    "email": "riccarda.longaretti@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto a domande aperte, orale facoltativo",
+    "libro": "Cerniglia, Longaretti, Parisio – Lezioni di Economia Pubblica, Giappichelli 2026",
+    "programma": "Equità ed efficienza, fallimenti di mercato, scelte collettive, imposte, welfare",
+    "link": "https://elearning.unimib.it/course/view.php?id=68990",
+    "ordine": 13,
+    "appelli": []
+  },
+  {
+    "id": "mgmt",
+    "materia": "Management e comunicazione",
+    "anno": 2,
+    "semestre": 2,
+    "cfu": 9,
+    "docente": "Claudio Chiacchierini",
+    "email": "claudio.chiacchierini@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto, 3 domande aperte strutturate; pre-appello su richiesta",
+    "libro": "Tunisini, Pencarelli, Ferrucci – Economia e management delle imprese, Hoepli",
+    "programma": "Strategie, crescita, organizzazione, performance, mercati esteri, comunicazione",
+    "link": "https://elearning.unimib.it/course/view.php?id=68979",
+    "ordine": 14,
+    "appelli": []
+  },
+  {
+    "id": "prog",
+    "materia": "Programmazione e basi di dati",
+    "anno": 2,
+    "semestre": 2,
+    "cfu": 6,
+    "docente": "Alessandro Avellone",
+    "email": "alessandro.avellone@unimib.it",
+    "esame": "Scritto",
+    "esame_dettaglio": "Scritto (problemi di programmazione), orale a discrezione del docente",
+    "libro": "Guttag – Introduzione alla programmazione con Python, Egea",
+    "programma": "Algoritmi, Python, pandas, SQL",
+    "link": "https://elearning.unimib.it/course/view.php?id=68975",
+    "ordine": 15,
+    "appelli": []
+  },
+  {
+    "id": "ec-az1",
+    "ordine": 99,
+    "materia": "Economia aziendale 1: Economia aziendale e bilancio",
+    "anno": 1,
+    "semestre": 1,
+    "cfu": 9,
+    "appelli": []
+  }
+]
