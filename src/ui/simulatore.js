@@ -26,7 +26,7 @@ export function renderSimulatore(ctx) {
   const p1 = el('section', 'panel');
   p1.append(el('h3', null, 'Dove vuoi arrivare'));
   const row = el('div', 'row');
-  const lab = el('label', 'row', 'Media obiettivo');
+  const lab = el('label', 'row sim-target', 'Media obiettivo');
   const inp = el('input'); inp.type = 'text'; inp.inputMode = 'decimal'; inp.size = 5; inp.placeholder = 'es. 27';
   inp.value = doc.obiettivo != null ? String(doc.obiettivo).replace('.', ',') : '';
   inp.setAttribute('aria-label', 'Media obiettivo');

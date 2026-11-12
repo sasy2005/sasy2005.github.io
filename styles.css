@@ -185,4 +185,14 @@ dialog .row { justify-content: flex-end; margin-top: 16px; }
 .sim-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
 .sim-row:last-child { border-bottom: none; }
 .sim-row span { min-width: 0; }
-.panel input[type=text] { width: 90px; }
+.panel .sim-target input[type=text] { width: 90px; }
+.study summary { list-style: none; display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+.study summary::-webkit-details-marker { display: none; }
+.study[open] summary { margin-bottom: 6px; }
+.checklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.check-row { display: flex; align-items: center; gap: 6px; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.check-row input[type=text] { flex: 1; min-width: 0; }
+.study .row input[type=text] { flex: 1; min-width: 0; }
+.panel input[type=date], .panel textarea { width: 100%; }
+.panel label input[type=text] { width: 100%; }
+@media (max-width: 400px) { .tab { font-size: 10px; } }
