@@ -6,7 +6,7 @@
 <pre id="report">running…</pre>
 <script type="module">
   import { run } from './runner.js';
-  const files = ['smoke', 'calc'];
+  const files = ['smoke', 'calc', 'userdoc'];
   const pre = document.getElementById('report');
   try {
     for (const f of files) await import(`./${f}.test.js`);
