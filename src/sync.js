@@ -13,11 +13,12 @@ import { firebaseConfig } from './firebase-config.js';
 import { normalizza, uguali, riepilogo } from './userdoc.js';
 import { corsiEffettivi } from './calc.js';
 import { risolviPrimoAccesso, campiCambiati } from './sync-regole.js';
+import { ricorda, ricordato } from './ui/account.js';
 
 const UID_KEY = 'libretto-sync-uid';
 let auth, db, unsub = null, timer = null, pending = null;
 let ultimoRemoto = null; // last document known to be online: writes send only the sections that differ
-let stato = { utente: null, online: navigator.onLine, sincronizzato: false, errore: null };
+let stato = { pronto: false, utente: null, ricordato: ricordato(), online: navigator.onLine, sincronizzato: false, errore: null };
 let notifica = () => {};
 let store, corsiPub, chiedi, listaRiepilogo, el;
 
@@ -132,7 +133,9 @@ export async function avvia(deps) {
   onAuthStateChanged(auth, async (user) => {
     if (unsub) { unsub(); unsub = null; }
     store.setRemoto(null);
-    setStato({ utente: user ? { nome: user.displayName, email: user.email, foto: user.photoURL } : null, sincronizzato: false, errore: null });
+    const utente = user ? { nome: user.displayName, email: user.email, foto: user.photoURL } : null;
+    ricorda(utente);
+    setStato({ pronto: true, utente, ricordato: utente, sincronizzato: false, errore: null });
     if (user) {
       try { await collega(user); } catch (e) { setStato({ errore: e.code || String(e) }); }
     }
@@ -141,8 +144,8 @@ export async function avvia(deps) {
 }
 
 export async function accedi() {
+  // No forced account chooser: if Google already knows the account, sign-in is one tap.
   const provider = new GoogleAuthProvider();
-  provider.setCustomParameters({ prompt: 'select_account' });
   // In the installed iPhone app popups are unreliable: use a redirect on the same domain.
   if (standalone()) return signInWithRedirect(auth, provider);
   try { await signInWithPopup(auth, provider); }

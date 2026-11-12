@@ -11,7 +11,7 @@ import { renderProssimo } from './ui/home.js';
 import { renderStudio } from './ui/studio.js';
 import { renderPratiche, bannerPratiche } from './ui/pratiche.js';
 import { esporta, importa, listaRiepilogo } from './ui/backup.js';
-import { renderAccount } from './ui/account.js';
+import { renderAccount, ricordato } from './ui/account.js';
 import { firebaseConfig } from './firebase-config.js';
 import { chiedi } from './ui/dom.js';
 
@@ -116,6 +116,8 @@ export async function avvia() {
 async function avviaSync() {
   if (!firebaseConfig) return;
   const host = $('account');
+  const r = ricordato();
+  renderAccount(host, { pronto: false, ricordato: r, online: navigator.onLine }, {});
   try {
     const sync = await import('./sync.js');
     await sync.avvia({
@@ -123,7 +125,7 @@ async function avviaSync() {
       onStato: (s) => renderAccount(host, s, sync),
     });
   } catch {
-    host.replaceChildren(el('span', 'sync', 'Sincronizzazione non disponibile (offline?)'));
+    host.replaceChildren(el('span', 'sync', r ? r.nome + ' · offline, salvato sul dispositivo' : 'Sincronizzazione non disponibile (offline?)'));
   }
 }
 

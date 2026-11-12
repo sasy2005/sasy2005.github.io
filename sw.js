@@ -1,6 +1,6 @@
 // Service worker: app files network-first (cache only when offline or slow), course data
 // stale-while-revalidate, CDN assets cache-first. Online, users always get the published code.
-const CACHE = 'libretto-v5';
+const CACHE = 'libretto-v6';
 const DATA = 'libretto-data';
 const CDN = 'libretto-cdn';
 
@@ -11,12 +11,17 @@ const SHELL = [
   'src/ui/dom.js', 'src/ui/kpi.js', 'src/ui/corsi.js', 'src/ui/calendario.js', 'src/ui/backup.js', 'src/ui/account.js', 'src/ui/simulatore.js', 'src/ui/piano.js', 'src/ui/home.js', 'src/ui/studio.js', 'src/ui/pratiche.js',
 ];
 
+const FIREBASE = ['firebase-app.js', 'firebase-auth.js', 'firebase-firestore.js']
+  .map((f) => 'https://www.gstatic.com/firebasejs/10.14.1/' + f);
+
 self.addEventListener('install', (ev) => {
   ev.waitUntil((async () => {
     const c = await caches.open(CACHE);
     await c.addAll(SHELL.map((u) => new Request(u, { cache: 'reload' }))); // bypass the HTTP cache
     const d = await caches.open(DATA);
     try { await d.add('data/corsi.json'); } catch { /* offline install: data comes later */ }
+    // Firebase SDK ready offline from the first launch, so the saved sign-in is restored quickly.
+    try { await (await caches.open(CDN)).addAll(FIREBASE); } catch { /* fetched on first use instead */ }
     await self.skipWaiting();
   })());
 });
