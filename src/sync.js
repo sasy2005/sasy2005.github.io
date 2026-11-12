@@ -7,15 +7,16 @@ import {
   browserPopupRedirectResolver,
 } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
 import {
-  initializeFirestore, persistentLocalCache, persistentMultipleTabManager, doc, getDoc, setDoc, onSnapshot,
+  initializeFirestore, persistentLocalCache, persistentMultipleTabManager, doc, getDoc, setDoc, updateDoc, onSnapshot,
 } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
 import { firebaseConfig } from './firebase-config.js';
 import { normalizza, uguali, riepilogo } from './userdoc.js';
 import { corsiEffettivi } from './calc.js';
-import { risolviPrimoAccesso } from './sync-regole.js';
+import { risolviPrimoAccesso, campiCambiati } from './sync-regole.js';
 
 const UID_KEY = 'libretto-sync-uid';
 let auth, db, unsub = null, timer = null, pending = null;
+let ultimoRemoto = null; // last document known to be online: writes send only the sections that differ
 let stato = { utente: null, online: navigator.onLine, sincronizzato: false, errore: null };
 let notifica = () => {};
 let store, corsiPub, chiedi, listaRiepilogo, el;
@@ -27,11 +28,28 @@ function standalone() {
   return window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 }
 
+/** Full upload (first sign-in, conflict resolved in favour of this device). */
+async function caricaTutto(ref, d) {
+  await setDoc(ref, pulito(d));
+  ultimoRemoto = pulito(d);
+  store.pulisciSporco();
+}
+
 function flush() {
   if (!pending) return;
   clearTimeout(timer);
   const { ref, d } = pending; pending = null;
-  setDoc(ref, pulito(d)).catch((e) => setStato({ errore: e.code || String(e) }));
+  const nuovo = pulito(d);
+  const campi = campiCambiati(ultimoRemoto, nuovo);
+  if (!campi.length) return;
+  // Only the changed sections: an old offline write cannot wipe sections edited on another device.
+  const patch = { aggiornato: nuovo.aggiornato };
+  for (const k of campi) patch[k] = nuovo[k];
+  ultimoRemoto = { ...(ultimoRemoto || {}), ...patch };
+  updateDoc(ref, patch)
+    .catch((e) => (e.code === 'not-found' ? setDoc(ref, nuovo) : Promise.reject(e)))
+    .then(() => store.pulisciSporco())
+    .catch((e) => setStato({ errore: e.code || String(e) }));
 }
 
 function scriviDebounced(ref) {
@@ -71,15 +89,20 @@ async function collega(user) {
   }
 
   if (remoto !== undefined) {
-    const scelta = risolviPrimoAccesso(store.attuale(), remoto, localStorage.getItem(UID_KEY), user.uid);
-    if (scelta === 'carica-locale') await setDoc(ref, pulito(store.attuale()));
-    else if (scelta === 'usa-remoto') store.salva(remoto, 'remoto');
+    const scelta = risolviPrimoAccesso(store.attuale(), remoto, localStorage.getItem(UID_KEY), user.uid, store.sporco());
+    ultimoRemoto = remoto ? pulito(remoto) : null;
+    if (scelta === 'carica-locale') await caricaTutto(ref, store.attuale());
+    else if (scelta === 'usa-remoto') { store.salva(remoto, 'remoto'); store.pulisciSporco(); }
     else if (scelta === 'chiedi') {
       const r = await scegli(store.attuale(), remoto);
-      if (r === 'locale') await setDoc(ref, pulito(store.attuale()));
-      else if (r === 'remoto') store.salva(remoto, 'remoto');
+      if (r === 'locale') await caricaTutto(ref, store.attuale());
+      else if (r === 'remoto') { store.salva(remoto, 'remoto'); store.pulisciSporco(); }
       else { await signOut(auth); return; } // dismissed: change nothing
-    }
+    } else store.pulisciSporco();
+  } else if (store.sporco()) {
+    // Offline but already linked: queue this device's edits section by section.
+    pending = { ref, d: store.attuale() };
+    timer = setTimeout(flush, 500);
   }
   localStorage.setItem(UID_KEY, user.uid);
   store.setRemoto(scriviDebounced(ref));
@@ -87,6 +110,7 @@ async function collega(user) {
     setStato({ sincronizzato: !s.metadata.fromCache && !s.metadata.hasPendingWrites });
     if (!s.exists() || s.metadata.hasPendingWrites || pending) return;
     const r = normalizza(s.data());
+    ultimoRemoto = pulito(r);
     if (!uguali(r, store.attuale())) store.salva(r, 'remoto');
   }, (e) => setStato({ errore: e.code || String(e) }));
 }

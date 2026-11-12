@@ -28,3 +28,13 @@ test('sw: icone e manifest in lista', async () => {
   const sw = await (await fetch('/sw.js')).text();
   for (const f of ['index.html', 'styles.css', 'manifest.webmanifest', 'icons/icon-192.png']) eq(sw.includes(`'${f}'`), true, f);
 });
+
+test('tutti i moduli dell\'app si caricano senza errori di sintassi', async () => {
+  const m = await import('../src/app.js');
+  eq(typeof m.avvia, 'function');
+});
+
+test('sync.js (caricato a parte) si carica con l\'SDK Firebase', async () => {
+  const m = await import('../src/sync.js');
+  eq(['accedi', 'avvia', 'esci'].every((k) => typeof m[k] === 'function'), true);
+});

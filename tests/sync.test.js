@@ -24,3 +24,19 @@ test('dati diversi su entrambi → chiedi', () => {
   eq(risolviPrimoAccesso(conVoto(27), conVoto(28), null, 'u1'), 'chiedi');
   eq(risolviPrimoAccesso(conVoto(27), conVoto(28), 'altro', 'u1'), 'chiedi');
 });
+
+test('stesso utente ma modifiche locali non ancora inviate → chiedi (non sovrascrivere)', () => {
+  eq(risolviPrimoAccesso(conVoto(27), conVoto(28), 'u1', 'u1', true), 'chiedi');
+  eq(risolviPrimoAccesso(conVoto(28), conVoto(28), 'u1', 'u1', true), 'nessuna-azione');
+});
+
+import { campiCambiati } from '../src/sync-regole.js';
+
+test('campiCambiati: solo le sezioni modificate', () => {
+  const a = docVuoto();
+  const b = { ...docVuoto(), esami: { B: { passato: true, voto: 28 } }, aggiornato: 'x' };
+  eq(campiCambiati(a, b), ['esami']);
+  eq(campiCambiati(a, { ...a, piano: { x: { data: '2027-01-01' } }, obiettivo: 27 }), ['obiettivo', 'piano']);
+  eq(campiCambiati(a, a), []);
+  eq(campiCambiati(null, a).length > 5, true);
+});

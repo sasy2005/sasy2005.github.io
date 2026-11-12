@@ -42,3 +42,15 @@ test('store: dati corrotti → documento vuoto', () => {
   eq(store.carica().esami, {});
   if (prev == null) localStorage.removeItem(store.KEY); else localStorage.setItem(store.KEY, prev);
 });
+
+test('store: modifiche senza remoto segnano "da inviare"', () => {
+  store.pulisciSporco();
+  store.setRemoto(null);
+  store.aggiorna((d) => { d.obiettivo = 23; });
+  eq(store.sporco(), true);
+  store.pulisciSporco();
+  eq(store.sporco(), false);
+  store.salva(store.attuale(), 'remoto');
+  eq(store.sporco(), false);
+  if (prev == null) localStorage.removeItem(store.KEY); else localStorage.setItem(store.KEY, prev);
+});

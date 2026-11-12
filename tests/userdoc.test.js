@@ -58,3 +58,19 @@ test('vuoto: documento senza dati', () => {
   eq(vuoto({ esami: {} }), true);
   eq(vuoto({ esami: { B: { passato: true, voto: 28 } } }), false);
 });
+
+import { docDaImport } from '../src/userdoc.js';
+
+test('import v1 sopra un documento esistente aggiorna solo i voti', () => {
+  const cur = normalizza({ v: 2, riconoscimenti: RIC_TEST, piano: { A: { data: '2027-01-12', ora: '08:30' } }, pratiche: [{ id: 'p', titolo: 'Mail' }], esami: { A: { passato: true, voto: 20 } } });
+  const d = docDaImport({ esami: { B: { passato: true, voto: 28 } } }, cur);
+  eq(d.esami, { B: { passato: true, voto: 28 } });
+  eq(d.riconoscimenti, RIC_TEST);
+  eq(d.piano.A.data, '2027-01-12');
+  eq(d.pratiche.length, 1);
+});
+
+test('import v2 sostituisce tutto', () => {
+  const cur = normalizza({ v: 2, riconoscimenti: RIC_TEST });
+  eq(docDaImport({ v: 2, esami: {} }, cur).riconoscimenti, {});
+});

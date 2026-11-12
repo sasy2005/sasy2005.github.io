@@ -34,6 +34,16 @@ export function normalizza(raw) {
   return d;
 }
 
+/**
+ * Document resulting from importing `raw` over `attuale`: an old v1 backup (grades only)
+ * updates only the grades and keeps everything else; a v2 backup replaces the document.
+ */
+export function docDaImport(raw, attuale) {
+  const nuovo = normalizza(raw);
+  if (raw.v != null) return nuovo;
+  return { ...normalizza(attuale), esami: nuovo.esami };
+}
+
 /** Summary shown before an import or a sync choice. */
 export function riepilogo(doc, corsiEff) {
   const voti = Object.entries(doc.esami)

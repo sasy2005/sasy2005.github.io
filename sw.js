@@ -1,6 +1,6 @@
-// Service worker: app shell offline, course data stale-while-revalidate, CDN assets cache-first.
-// Bump CACHE on every release (see README).
-const CACHE = 'libretto-v4';
+// Service worker: app files network-first (cache only when offline or slow), course data
+// stale-while-revalidate, CDN assets cache-first. Online, users always get the published code.
+const CACHE = 'libretto-v5';
 const DATA = 'libretto-data';
 const CDN = 'libretto-cdn';
 
@@ -14,7 +14,7 @@ const SHELL = [
 self.addEventListener('install', (ev) => {
   ev.waitUntil((async () => {
     const c = await caches.open(CACHE);
-    await c.addAll(SHELL);
+    await c.addAll(SHELL.map((u) => new Request(u, { cache: 'reload' }))); // bypass the HTTP cache
     const d = await caches.open(DATA);
     try { await d.add('data/corsi.json'); } catch { /* offline install: data comes later */ }
     await self.skipWaiting();
@@ -36,6 +36,19 @@ async function staleWhileRevalidate(req, cacheName) {
   return hit || (await net) || new Response('[]', { status: 503, headers: { 'Content-Type': 'application/json' } });
 }
 
+/** Fresh from the network (revalidated), cached copy if offline or after 3 s. */
+async function networkFirst(req) {
+  const c = await caches.open(CACHE);
+  const net = fetch(req, { cache: 'no-cache' }).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
+  const lento = new Promise((res) => setTimeout(res, 3000));
+  try {
+    const r = await Promise.race([net, lento.then(() => null)]);
+    if (r) return r;
+  } catch { /* offline */ }
+  const hit = await c.match(req, { ignoreSearch: true });
+  return hit || net;
+}
+
 async function cacheFirst(req, cacheName) {
   const c = await caches.open(cacheName);
   const hit = await c.match(req);
@@ -54,10 +67,10 @@ self.addEventListener('fetch', (ev) => {
     if (url.pathname.includes('/__/') || url.pathname.includes('/tests/')) return; // auth helper, tests: network
     if (url.pathname.endsWith('/data/corsi.json')) { ev.respondWith(staleWhileRevalidate(req, DATA)); return; }
     if (req.mode === 'navigate') {
-      ev.respondWith(fetch(req).catch(async () => (await caches.match('index.html', { cacheName: CACHE }))));
+      ev.respondWith(fetch(req, { cache: 'no-cache' }).catch(async () => (await caches.match('index.html', { cacheName: CACHE }))));
       return;
     }
-    ev.respondWith(caches.match(req, { cacheName: CACHE, ignoreSearch: true }).then((hit) => hit || fetch(req)));
+    ev.respondWith(networkFirst(req));
     return;
   }
 

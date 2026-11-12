@@ -1,6 +1,6 @@
 // Export / import of the private document, with a summary to confirm before overwriting.
 import { el, fmt, chiedi, scarica, toast, oggiISO } from './dom.js';
-import { normalizza, riepilogo, uguali, vuoto } from '../userdoc.js';
+import { docDaImport, riepilogo, uguali, vuoto } from '../userdoc.js';
 import { corsiEffettivi } from '../calc.js';
 
 export function esporta(doc) {
@@ -22,13 +22,13 @@ export function listaRiepilogo(r, corsiPub, doc) {
 
 /** Reads a file, shows the summary, and saves it only after confirmation. */
 export async function importa(file, { corsiPub, attuale, salva }) {
-  let nuovo;
-  try { nuovo = normalizza(JSON.parse(await file.text())); }
+  let nuovo, soloVoti = false;
+  try { const raw = JSON.parse(await file.text()); nuovo = docDaImport(raw, attuale()); soloVoti = raw.v == null; }
   catch { toast('File non valido: scegli un backup del Libretto.'); return false; }
   const cur = attuale();
   if (uguali(nuovo, cur)) { toast('Questi dati sono già nell\'app.'); return false; }
   const body = el('div');
-  body.append(el('p', null, 'Il file contiene:'));
+  body.append(el('p', null, soloVoti ? 'Backup del vecchio Libretto: aggiorna solo i voti, il resto resta com’è. Dopo l’importazione avrai:' : 'Il file contiene:'));
   body.append(listaRiepilogo(riepilogo(nuovo, corsiEffettivi(corsiPub, nuovo.riconoscimenti)), corsiPub, nuovo));
   if (!vuoto(cur)) {
     const w = el('p', 'note', 'Sostituirà i dati che ci sono adesso nell\'app:');
