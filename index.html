@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Libretto 2026/27</title>
+<meta name="description" content="Esami, voti e media del corso di laurea.">
+<link rel="icon" href="libretto.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap" id="app">
+  <header class="appbar">
+    <div class="head">
+      <span class="eyebrow">Economia, Analisi dei Dati e Management · Bicocca · turno A-L</span>
+      <h1>Il tuo libretto 2026/27</h1>
+    </div>
+    <div class="appbar-actions">
+      <div class="row" id="account"></div>
+      <div class="row" id="azioni"></div>
+    </div>
+  </header>
+  <main id="main"><p class="empty">Caricamento…</p></main>
+</div>
+<nav class="tabbar" aria-label="Sezioni"><div class="tabbar-in" id="tabbar-in"></div></nav>
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="module">
+  import { avvia } from './src/app.js';
+  avvia();
+</script>
+</body>
+</html>
