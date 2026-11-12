@@ -97,6 +97,19 @@ export async function avvia() {
   store.onCambio(() => render());
   window.addEventListener('hashchange', () => { render(); window.scrollTo(0, 0); });
   render();
+  registraSW();
+}
+
+function registraSW() {
+  if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+  // On localhost the SW is opt-in (localStorage 'sw-dev' = '1'), so edits and tests are never served stale.
+  let dev = false;
+  try { dev = location.hostname === 'localhost' && localStorage.getItem('sw-dev') !== '1'; } catch { /* ignore */ }
+  if (dev) {
+    navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => r.unregister())).catch(() => {});
+    return;
+  }
+  navigator.serviceWorker.register('sw.js').catch(() => { /* offline support unavailable */ });
 }
 
 export const corsiPubblici = () => app.corsiPub;
