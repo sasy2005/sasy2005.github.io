@@ -1,0 +1,748 @@
+{
+ "Insegnamenti": {
+  "519515": {
+   "DatiInsegnamento": {
+    "Nome": "Parte di MATEMATICA FINANZIARIA A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "07-01-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-16 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "28-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-16 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "05-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519516": {
+   "DatiInsegnamento": {
+    "Nome": "Parte di MATEMATICA FINANZIARIA Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "07-01-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-06 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "28-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-06 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "05-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508513": {
+   "DatiInsegnamento": {
+    "Nome": "STATISTICA Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "08-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U4-04 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "02-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U4-04 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508516": {
+   "DatiInsegnamento": {
+    "Nome": "DIRITTO PUBBLICO E DELL'ECONOMIA A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "08-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame orale",
+     "Aula": "U1-12",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "10-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame orale",
+     "Aula": "U6-18",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "07-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522327": {
+   "DatiInsegnamento": {
+    "Nome": "MATEMATICA GENERALE Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "11-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-16 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "02-02-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-16 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "05-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508340": {
+   "DatiInsegnamento": {
+    "Nome": "ORGANIZZAZIONE AZIENDALE A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "11-01-2027",
+     "OraInizio": "09:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U1-13",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "01-02-2027",
+     "OraInizio": "09:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U4-05",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "05-04-2027",
+     "OraInizio": "14:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508342": {
+   "DatiInsegnamento": {
+    "Nome": "ORGANIZZAZIONE AZIENDALE Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "11-01-2027",
+     "OraInizio": "10:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U2-06 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "25-01-2027",
+     "OraInizio": "10:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U2-06 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "14:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522323": {
+   "DatiInsegnamento": {
+    "Nome": "ENGLISH FOR ECONOMICS AND BUSINESS A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "12-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U3-01 con Podio, U3-05 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "01-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U6-06 con Podio, U6-09 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522324": {
+   "DatiInsegnamento": {
+    "Nome": "ENGLISH FOR ECONOMICS AND BUSINESS Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "12-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U3-01 con Podio - U3-05 con Podio - BIOS ex U3",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "01-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U6-06 con Podio - U6-09 con Podio - AGORA' ex U6",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508511": {
+   "DatiInsegnamento": {
+    "Nome": "STATISTICA A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "12-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U4-02 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "02-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "LAB14A1 (U14)",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508519": {
+   "DatiInsegnamento": {
+    "Nome": "MICROECONOMIA Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "12-01-2027",
+     "OraInizio": "09:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-22 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "01-02-2027",
+     "OraInizio": "09:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U1-04 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "07-04-2027",
+     "OraInizio": "09:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522326": {
+   "DatiInsegnamento": {
+    "Nome": "MATEMATICA GENERALE A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "13-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-06 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "02-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-08 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "07-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519504": {
+   "DatiInsegnamento": {
+    "Nome": "DIRITTO PRIVATO E COMMERCIALE Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "13-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame orale",
+     "Aula": "U2-06 con Podio - QUANTUM ex U2",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "03-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame orale",
+     "Aula": "U2-06 con Podio - QUANTUM ex U2",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "08-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519505": {
+   "DatiInsegnamento": {
+    "Nome": "ECONOMIA AZIENDALE 2: SCELTE AZIENDALI E SISTEMI DI CONTROLLO A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "13-01-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-02 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "08-02-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-05 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "08-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522355": {
+   "DatiInsegnamento": {
+    "Nome": "STORIA ECONOMICA A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "14-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U4-01 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "03-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U1-03 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508518": {
+   "DatiInsegnamento": {
+    "Nome": "MICROECONOMIA A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "14-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U1-10 con podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "04-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U1-02 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "08-04-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "508517": {
+   "DatiInsegnamento": {
+    "Nome": "DIRITTO PUBBLICO E DELL'ECONOMIA Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "14-01-2027",
+     "OraInizio": "09:00",
+     "TipoEsame": "esame orale",
+     "Aula": "U1-11",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "10-02-2027",
+     "OraInizio": "09:00",
+     "TipoEsame": "esame orale",
+     "Aula": "U4-07",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "05-04-2027",
+     "OraInizio": "14:30",
+     "TipoEsame": "esame orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522356": {
+   "DatiInsegnamento": {
+    "Nome": "STORIA ECONOMICA Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "14-01-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U1-08 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "03-02-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U1-08 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "06-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519514": {
+   "DatiInsegnamento": {
+    "Nome": "Parte di METODI STATISTICI Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "19-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-09 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "09-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-09 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "09-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519513": {
+   "DatiInsegnamento": {
+    "Nome": "Parte di METODI STATISTICI A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "19-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-16 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "09-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U9-16 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "09-04-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522321": {
+   "DatiInsegnamento": {
+    "Nome": "ECONOMIA AZIENDALE 1: ECONOMIA AZIENDALE E BILANCIO Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "20-01-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "U6-03 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "17-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "07-04-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto-orale",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "522320": {
+   "DatiInsegnamento": {
+    "Nome": "ECONOMIA AZIENDALE 1: ECONOMIA AZIENDALE E BILANCIO A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "20-01-2027",
+     "OraInizio": "15:00",
+     "TipoEsame": "esame scritto",
+     "Aula": "U1- 01 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "04-02-2027",
+     "OraInizio": "15:00",
+     "TipoEsame": "esame scritto",
+     "Aula": "U1- 01 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "07-04-2027",
+     "OraInizio": "14:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519506": {
+   "DatiInsegnamento": {
+    "Nome": "ECONOMIA AZIENDALE 2: SCELTE AZIENDALI E SISTEMI DI CONTROLLO Li-Z"
+   },
+   "Appelli": [
+    {
+     "Data": "22-01-2027",
+     "OraInizio": "11:00",
+     "TipoEsame": "",
+     "Aula": "LAB14A1 (U14)",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "08-02-2027",
+     "OraInizio": "12:30",
+     "TipoEsame": "",
+     "Aula": "LAB14A1 (U14)",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "09-04-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  },
+  "519503": {
+   "DatiInsegnamento": {
+    "Nome": "DIRITTO PRIVATO E COMMERCIALE A-Lh"
+   },
+   "Appelli": [
+    {
+     "Data": "29-01-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "U3-02 con Podio",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "17-02-2027",
+     "OraInizio": "08:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    },
+    {
+     "Data": "09-04-2027",
+     "OraInizio": "13:30",
+     "TipoEsame": "esame scritto",
+     "Aula": "aula virtuale",
+     "Tipo": "Esame",
+     "event_Annullato": "0"
+    }
+   ]
+  }
+ }
+}

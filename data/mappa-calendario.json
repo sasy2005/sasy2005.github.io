@@ -1,0 +1,17 @@
+{
+  "dir-pub": { "nome": "DIRITTO PUBBLICO E DELL'ECONOMIA", "turno": "Li-Z" },
+  "mat-gen": { "nome": "MATEMATICA GENERALE", "turno": "A-Lh" },
+  "macro": { "nome": "MACROECONOMIA E POLITICHE ECONOMICHE", "turno": "A-Lh" },
+  "mat-fin": { "nome": "MATEMATICA FINANZIARIA", "turno": "A-Lh" },
+  "met-stat": { "nome": "METODI STATISTICI", "turno": "A-Lh" },
+  "micro": { "nome": "MICROECONOMIA", "turno": "A-Lh" },
+  "org": { "nome": "ORGANIZZAZIONE AZIENDALE", "turno": "A-Lh" },
+  "stat": { "nome": "STATISTICA", "turno": "A-Lh" },
+  "storia": { "nome": "STORIA ECONOMICA", "turno": "A-Lh" },
+  "eng": { "nome": "ENGLISH FOR ECONOMICS AND BUSINESS", "turno": "A-Lh" },
+  "dir-priv": { "nome": "DIRITTO PRIVATO E COMMERCIALE", "turno": "A-Lh" },
+  "ec-az2": { "nome": "ECONOMIA AZIENDALE 2: SCELTE AZIENDALI E SISTEMI DI CONTROLLO", "turno": "A-Lh" },
+  "ec-pub": { "nome": "ECONOMIA PUBBLICA", "turno": "A-Lh" },
+  "mgmt": { "nome": "MANAGEMENT E COMUNICAZIONE", "turno": "A-Lh" },
+  "prog": { "nome": "PROGRAMMAZIONE E BASI DI DATI", "turno": "A-Lh" }
+}

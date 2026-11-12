@@ -1,0 +1,8 @@
+{
+  "name": "libretto",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "appelli": "node scripts/update-appelli.mjs"
+  }
+}

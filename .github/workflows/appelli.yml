@@ -1,0 +1,31 @@
+name: Aggiorna appelli
+
+on:
+  schedule:
+    - cron: "15 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  appelli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Scarica il calendario e aggiorna data/corsi.json
+        run: node scripts/update-appelli.mjs
+      - name: Commit se ci sono novità
+        run: |
+          if git diff --quiet data/corsi.json; then
+            echo "Nessuna modifica"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/corsi.json
+          git commit -m "data: aggiorna appelli dal calendario Unimib"
+          git push
