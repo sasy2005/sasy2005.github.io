@@ -5,6 +5,7 @@ import * as store from './store.js';
 import { renderKpi } from './ui/kpi.js';
 import { renderEsami } from './ui/corsi.js';
 import { renderCalendario } from './ui/calendario.js';
+import { renderSimulatore } from './ui/simulatore.js';
 import { esporta, importa, listaRiepilogo } from './ui/backup.js';
 import { renderAccount } from './ui/account.js';
 import { firebaseConfig } from './firebase-config.js';
@@ -26,6 +27,7 @@ const VIEWS = [
     return v;
   } },
   { id: 'esami', label: 'Esami', render: renderEsami },
+  { id: 'simulatore', label: 'Simula', render: renderSimulatore },
 ];
 
 const app = { corsiPub: [], homeExtra: [] };

@@ -181,3 +181,8 @@ dialog .row { justify-content: flex-end; margin-top: 16px; }
 .toast { z-index: 30; bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 .toast[hidden] { display: none; }
 .pars input[type=text] { width: 80px; }
+.panel h3 { font-size: 15px; }
+.sim-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.sim-row:last-child { border-bottom: none; }
+.sim-row span { min-width: 0; }
+.panel input[type=text] { width: 90px; }

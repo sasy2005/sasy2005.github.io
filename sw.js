@@ -1,14 +1,14 @@
 // Service worker: app shell offline, course data stale-while-revalidate, CDN assets cache-first.
 // Bump CACHE on every release (see README).
-const CACHE = 'libretto-v1';
+const CACHE = 'libretto-v2';
 const DATA = 'libretto-data';
 const CDN = 'libretto-cdn';
 
 const SHELL = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest', 'libretto.ico',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
-  'src/app.js', 'src/calc.js', 'src/store.js', 'src/userdoc.js', 'src/firebase-config.js', 'src/sync.js', 'src/sync-regole.js',
-  'src/ui/dom.js', 'src/ui/kpi.js', 'src/ui/corsi.js', 'src/ui/calendario.js', 'src/ui/backup.js', 'src/ui/account.js',
+  'src/app.js', 'src/calc.js', 'src/store.js', 'src/userdoc.js', 'src/firebase-config.js', 'src/sync.js', 'src/sync-regole.js', 'src/simulatore.js',
+  'src/ui/dom.js', 'src/ui/kpi.js', 'src/ui/corsi.js', 'src/ui/calendario.js', 'src/ui/backup.js', 'src/ui/account.js', 'src/ui/simulatore.js',
 ];
 
 self.addEventListener('install', (ev) => {
