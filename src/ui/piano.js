@@ -16,7 +16,7 @@ export function eventiCalendario(corsi, doc) {
     const allarmi = [{ giorniPrima: 2, testo: 'Esame tra 2 giorni: ' + (k.materia || id) }];
     if (!p.prenotato) allarmi.unshift({ giorniPrima: anticipoPrenotazione, testo: 'Prenotati su Esse3: ' + (k.materia || id) });
     return {
-      uid: id + '-' + p.data.replace(/-/g, '') + '@libretto',
+      uid: id + '@libretto', // one event per course: re-exporting after a date change updates it
       titolo: 'Esame: ' + (k.materia || id),
       inizio: p.data + 'T' + (p.ora || '09:00'),
       durataMin: 120,
@@ -39,7 +39,7 @@ function esportaCalendario(corsi, doc) {
 function avvisi(ctx) {
   const { corsi, doc, oggi } = ctx;
   const out = [];
-  for (const c of conflitti(doc.piano, doc.impostazioni.giorniMinimi)) {
+  for (const c of conflitti(doc.piano, doc.impostazioni.giorniMinimi, oggi, doc.esami)) {
     out.push(['warn', nome(corsi, c.a) + ' e ' + nome(corsi, c.b) + (c.giorni === 0 ? ' sono lo stesso giorno.' : ' sono a ' + c.giorni + (c.giorni === 1 ? ' giorno' : ' giorni') + ' di distanza.')]);
   }
   for (const id of appelliMancanti(corsi, doc.piano)) {

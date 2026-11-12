@@ -13,9 +13,10 @@ export function giorniTra(a, b) {
   return Math.round((ms(b) - ms(a)) / 86400000);
 }
 
-/** Pairs of chosen exams closer than `giorniMinimi` days. */
-export function conflitti(piano, giorniMinimi) {
-  const voci = Object.entries(piano).filter(([, p]) => p && p.data)
+/** Pairs of chosen exams closer than `giorniMinimi` days (only upcoming exams not yet passed). */
+export function conflitti(piano, giorniMinimi, oggi = '', esami = {}) {
+  const voci = Object.entries(piano)
+    .filter(([id, p]) => p && p.data && p.data >= oggi && votoEsito(esami[id] || {}) == null)
     .sort(([ia, a], [ib, b]) => a.data.localeCompare(b.data) || ia.localeCompare(ib));
   const out = [];
   for (let i = 0; i < voci.length; i++) {

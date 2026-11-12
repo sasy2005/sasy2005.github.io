@@ -1,6 +1,6 @@
 // Service worker: app files network-first (cache only when offline or slow), course data
 // stale-while-revalidate, CDN assets cache-first. Online, users always get the published code.
-const CACHE = 'libretto-v6';
+const CACHE = 'libretto-v7';
 const DATA = 'libretto-data';
 const CDN = 'libretto-cdn';
 

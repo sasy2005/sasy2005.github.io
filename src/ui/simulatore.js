@@ -8,7 +8,8 @@ const num = (s) => parseFloat(String(s).replace(',', '.'));
 
 function messaggio(r, obiettivo) {
   const x = fmt(obiettivo, obiettivo % 1 ? 1 : 0);
-  if (r.stato === 'nessun-esame') return ['Non ci sono esami da simulare.', ''];
+  if (r.stato === 'raggiunto') return ['Con questi voti arrivi a ' + fmt(r.media) + ': obiettivo ' + x + ' raggiunto.', 'ok'];
+  if (r.stato === 'non-raggiunto') return ['Con questi voti arrivi a ' + fmt(r.media) + ': ti mancano ' + fmt(obiettivo - r.media) + ' punti per arrivare a ' + x + '.', 'warn'];
   if (r.stato === 'irraggiungibile') return ['Con i voti fissati non arrivi a ' + x + ': servirebbe più di 30 di media.', 'warn'];
   if (r.stato === 'garantito') return ['Arrivi a ' + x + ' anche col 18 in tutti gli esami rimasti.', 'ok'];
   return ['Ti serve in media ' + fmt(r.voto, 1) + ' negli esami che restano (' + r.cfuRimasti + ' CFU).', ''];

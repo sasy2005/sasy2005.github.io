@@ -24,7 +24,11 @@ function fissati(corsiEff, esami, ipotesi) {
  */
 export function votoNecessario(corsiEff, esami, ipotesi, obiettivo) {
   const f = fissati(corsiEff, esami, ipotesi);
-  if (f.rimasti === 0) return { stato: 'nessun-esame', voto: null, cfuRimasti: 0 };
+  if (f.rimasti === 0) {
+    // Every exam already has a grade (real or hypothetical): say whether the target is reached.
+    const media = f.cfu ? f.somma / f.cfu : null;
+    return { stato: media != null && media >= obiettivo ? 'raggiunto' : 'non-raggiunto', voto: null, cfuRimasti: 0, media };
+  }
   const voto = (obiettivo * f.tot - f.somma) / f.rimasti;
   const stato = voto > 30 ? 'irraggiungibile' : voto < 18 ? 'garantito' : 'ok';
   return { stato, voto, cfuRimasti: f.rimasti };

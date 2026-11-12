@@ -67,3 +67,20 @@ test('eventiCalendario: promemoria prenotazione solo se non prenotato', () => {
   doc.piano.a.prenotato = true;
   eq(eventiCalendario(corsi, doc)[0].allarmi.map((a) => a.giorniPrima), [2]);
 });
+
+test('conflitti: ignora le date già passate', () => {
+  const piano = { a: { data: '2027-01-12' }, b: { data: '2027-01-13' }, c: { data: '2027-02-01' }, d: { data: '2027-02-02' } };
+  eq(conflitti(piano, 3, '2027-01-20', {}), [{ a: 'c', b: 'd', giorni: 1 }]);
+});
+
+test('conflitti: ignora gli esami già passati', () => {
+  const piano = { a: { data: '2027-02-01' }, b: { data: '2027-02-02' } };
+  eq(conflitti(piano, 3, '2027-01-01', { a: { passato: true, voto: 27 } }), []);
+});
+
+test('eventiCalendario: lo stesso esame tiene lo stesso UID anche se cambi data', () => {
+  const corsi = [{ id: 'a', materia: 'Statistica', appelli: [] }];
+  const d1 = { ...docVuoto(), piano: { a: { data: '2027-01-12', ora: '08:30' } } };
+  const d2 = { ...docVuoto(), piano: { a: { data: '2027-02-02', ora: '08:30' } } };
+  eq(eventiCalendario(corsi, d1)[0].uid, eventiCalendario(corsi, d2)[0].uid);
+});

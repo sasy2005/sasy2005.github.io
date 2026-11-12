@@ -32,9 +32,17 @@ test('votoNecessario: garantito', () => {
   eq(votoNecessario(eff(), {}, {}, 18).stato, 'garantito');
 });
 
-test('votoNecessario: nessun esame da simulare', () => {
+test('votoNecessario: nessun esame rimasto → dice se l’obiettivo è raggiunto', () => {
   const r = votoNecessario(eff(), { A: { passato: true, voto: 25 }, B: { passato: true, voto: 25 } }, {}, 26);
-  eq([r.stato, r.voto, r.cfuRimasti], ['nessun-esame', null, 0]);
+  eq([r.stato, r.voto, r.cfuRimasti], ['non-raggiunto', null, 0]);
+  near(r.media, (282 + 300) / 24);
+  eq(votoNecessario(eff(), { A: { passato: true, voto: 25 }, B: { passato: true, voto: 25 } }, {}, 24).stato, 'raggiunto');
+});
+
+test('votoNecessario: tutti gli esami rimasti con voto ipotetico', () => {
+  const r = votoNecessario(eff(), {}, { A: 30, B: 30 }, 26);
+  eq(r.stato, 'raggiunto');
+  near(r.media, (282 + 360) / 24);
 });
 
 test('simula: media e base con voti ipotetici', () => {
