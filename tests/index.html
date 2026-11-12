@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="it">
+<head><meta charset="utf-8"><title>Test Libretto</title>
+<style>pre{white-space:pre-wrap;font:14px/1.5 ui-monospace,monospace}</style></head>
+<body>
+<pre id="report">running…</pre>
+<script type="module">
+  import { run } from './runner.js';
+  const files = ['smoke'];
+  const pre = document.getElementById('report');
+  try {
+    for (const f of files) await import(`./${f}.test.js`);
+    const r = await run();
+    pre.textContent = pre.textContent.replaceAll('\u0001', '\n');
+    console.log(document.title, r);
+  } catch (e) {
+    pre.textContent = 'FAIL loading tests — ' + e.message;
+    pre.dataset.result = 'FAIL';
+    document.title = 'FAIL load';
+  }
+</script>
+</body>
+</html>
