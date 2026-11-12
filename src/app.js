@@ -6,6 +6,8 @@ import { renderKpi } from './ui/kpi.js';
 import { renderEsami } from './ui/corsi.js';
 import { renderCalendario } from './ui/calendario.js';
 import { renderSimulatore } from './ui/simulatore.js';
+import { renderPiano } from './ui/piano.js';
+import { renderProssimo } from './ui/home.js';
 import { esporta, importa, listaRiepilogo } from './ui/backup.js';
 import { renderAccount } from './ui/account.js';
 import { firebaseConfig } from './firebase-config.js';
@@ -28,9 +30,10 @@ const VIEWS = [
   } },
   { id: 'esami', label: 'Esami', render: renderEsami },
   { id: 'simulatore', label: 'Simula', render: renderSimulatore },
+  { id: 'piano', label: 'Piano', render: renderPiano },
 ];
 
-const app = { corsiPub: [], homeExtra: [] };
+const app = { corsiPub: [], homeExtra: [renderProssimo] };
 
 /** Later modules register extra tabs and home widgets here. */
 export function registraVista(v) { VIEWS.push(v); }
