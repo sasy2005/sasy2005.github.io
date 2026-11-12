@@ -5,7 +5,10 @@ import * as store from './store.js';
 import { renderKpi } from './ui/kpi.js';
 import { renderEsami } from './ui/corsi.js';
 import { renderCalendario } from './ui/calendario.js';
-import { esporta, importa } from './ui/backup.js';
+import { esporta, importa, listaRiepilogo } from './ui/backup.js';
+import { renderAccount } from './ui/account.js';
+import { firebaseConfig } from './firebase-config.js';
+import { chiedi } from './ui/dom.js';
 
 const ICONS = {
   home: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>',
@@ -98,6 +101,21 @@ export async function avvia() {
   window.addEventListener('hashchange', () => { render(); window.scrollTo(0, 0); });
   render();
   registraSW();
+  avviaSync();
+}
+
+async function avviaSync() {
+  if (!firebaseConfig) return;
+  const host = $('account');
+  try {
+    const sync = await import('./sync.js');
+    await sync.avvia({
+      store, corsiPub: () => app.corsiPub, chiedi, listaRiepilogo, el,
+      onStato: (s) => renderAccount(host, s, sync),
+    });
+  } catch {
+    host.replaceChildren(el('span', 'sync', 'Sincronizzazione non disponibile (offline?)'));
+  }
 }
 
 function registraSW() {

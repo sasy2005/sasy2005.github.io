@@ -7,8 +7,8 @@ const CDN = 'libretto-cdn';
 const SHELL = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest', 'libretto.ico',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
-  'src/app.js', 'src/calc.js', 'src/store.js', 'src/userdoc.js',
-  'src/ui/dom.js', 'src/ui/kpi.js', 'src/ui/corsi.js', 'src/ui/calendario.js', 'src/ui/backup.js',
+  'src/app.js', 'src/calc.js', 'src/store.js', 'src/userdoc.js', 'src/firebase-config.js', 'src/sync.js', 'src/sync-regole.js',
+  'src/ui/dom.js', 'src/ui/kpi.js', 'src/ui/corsi.js', 'src/ui/calendario.js', 'src/ui/backup.js', 'src/ui/account.js',
 ];
 
 self.addEventListener('install', (ev) => {
