@@ -1,0 +1,17 @@
+{
+  "name": "Allenamento",
+  "short_name": "Allenamento",
+  "description": "Scheda del preparatore, pesi, tenute e dolore al ginocchio.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#e8742c",
+  "background_color": "#faf6ef",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
