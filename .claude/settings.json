@@ -1,0 +1,17 @@
+{
+  "extraKnownMarketplaces": {
+    "sasy-mods": {
+      "source": { "source": "github", "repo": "sasy2005/claude-mods" }
+    }
+  },
+  "enabledPlugins": {
+    "cache-clock@sasy-mods": true,
+    "handoff@sasy-mods": true,
+    "mods@sasy-mods": true,
+    "context-gauge@sasy-mods": true,
+    "effort-picker@sasy-mods": true,
+    "linked-sessions@sasy-mods": true,
+    "api-keys@sasy-mods": true,
+    "skill-hint@sasy-mods": true
+  }
+}
