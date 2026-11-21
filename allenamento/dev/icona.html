@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}#i{width:512px;height:512px;display:grid;place-items:center;background:#e8742c}#c{width:var(--s);height:var(--s);border-radius:50%;background:#faf6ef;display:grid;place-items:center;overflow:hidden}#c svg{width:120%;margin-top:6%}</style>
+<div id="i"><div id="c"></div></div>
+<script type="module">
+import { SPEC } from '../js/esercizi.js'; import { svg, BASE } from '../js/figure.js';
+const s = SPEC['t-raise']; const k = s.keys[1].p;
+document.getElementById('c').innerHTML = svg({ ...s, scene: '' }, { ...BASE, ...s.keys[0].p, ...k });
+document.documentElement.style.setProperty('--s', new URLSearchParams(location.search).get('s') || '440px');
+</script>

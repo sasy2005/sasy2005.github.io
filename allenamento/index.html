@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allenamento</title>
+<meta name="description" content="Scheda del preparatore, pesi, tenute e dolore al ginocchio.">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#e8742c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Allenamento">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="appbar">
+  <div class="brand"><span class="logo" aria-hidden="true"></span><span>Allenamento</span></div>
+  <div id="account"></div>
+</header>
+<div id="banner" class="banner" hidden></div>
+<main id="main" class="wrap"></main>
+<nav class="tabs" aria-label="Sezioni">
+  <button data-tab="oggi"><span aria-hidden="true">🏐</span>Allenamento</button>
+  <button data-tab="stats"><span aria-hidden="true">📈</span>Statistiche</button>
+  <button data-tab="scheda"><span aria-hidden="true">📋</span>Scheda</button>
+</nav>
+<div id="timer" class="timer" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<dialog id="dialog"></dialog>
+<script type="module">
+import { avvia } from './js/app.js';
+avvia();
+if ('serviceWorker' in navigator && location.hostname !== 'localhost') navigator.serviceWorker.register('sw.js', { scope: './' });
+</script>
+</body>
+</html>

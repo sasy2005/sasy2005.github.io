@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><style>body{font:12px sans-serif;margin:8px;background:#fff}.g{display:grid;grid-template-columns:repeat(4,260px);gap:6px}.c{border:1px solid #ddd}.c svg{width:260px;display:block}</style>
+<div class="g" id="g"></div>
+<script type="module">
+import { SPEC } from '../js/esercizi.js';
+import { svg, BASE } from '../js/figure.js';
+const only = new URLSearchParams(location.search).get('k');
+const g = document.getElementById('g');
+for (const [k, s] of Object.entries(SPEC)) {
+  if (only && !only.split(',').includes(k)) continue;
+  s.keys.forEach((key, i) => { const d = document.createElement('div'); d.className='c'; d.innerHTML = '<b>'+k+' '+i+'</b>' + svg(s, {...BASE, ...s.keys[0].p, ...key.p}); g.append(d); });
+}
+document.body.dataset.ok = 1;
+</script>

@@ -1,6 +1,6 @@
 // Service worker: app files network-first (cache only when offline or slow), course data
 // stale-while-revalidate, CDN assets cache-first. Online, users always get the published code.
-const CACHE = 'libretto-v7';
+const CACHE = 'libretto-v8';
 const DATA = 'libretto-data';
 const CDN = 'libretto-cdn';
 
@@ -29,7 +29,7 @@ self.addEventListener('install', (ev) => {
 self.addEventListener('activate', (ev) => {
   ev.waitUntil((async () => {
     const keep = new Set([CACHE, DATA, CDN]);
-    for (const k of await caches.keys()) if (!keep.has(k)) await caches.delete(k);
+    for (const k of await caches.keys()) if (!keep.has(k) && !k.startsWith('allenamento')) await caches.delete(k);
     await self.clients.claim();
   })());
 });
@@ -70,6 +70,7 @@ self.addEventListener('fetch', (ev) => {
 
   if (url.origin === location.origin) {
     if (url.pathname.includes('/__/') || url.pathname.includes('/tests/')) return; // auth helper, tests: network
+    if (url.pathname.includes('/allenamento/')) return; // app separata con il suo service worker
     if (url.pathname.endsWith('/data/corsi.json')) { ev.respondWith(staleWhileRevalidate(req, DATA)); return; }
     if (req.mode === 'navigate') {
       ev.respondWith(fetch(req, { cache: 'no-cache' }).catch(async () => (await caches.match('index.html', { cacheName: CACHE }))));
