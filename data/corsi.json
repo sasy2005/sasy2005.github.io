@@ -314,13 +314,27 @@
         "data": "2027-01-12",
         "ora": "08:30",
         "tipo": "esame scritto",
-        "aula": "U3-01, U3-05"
+        "aula": "U3-01, U3-05",
+        "rimosso": true
+      },
+      {
+        "data": "2027-01-18",
+        "ora": "08:30",
+        "tipo": "",
+        "aula": "LAB4A1 (U4)"
       },
       {
         "data": "2027-02-01",
         "ora": "08:30",
         "tipo": "esame scritto",
-        "aula": "U6-06, U6-09"
+        "aula": "U6-06, U6-09",
+        "rimosso": true
+      },
+      {
+        "data": "2027-02-08",
+        "ora": "11:00",
+        "tipo": "",
+        "aula": "LAB4A1 (U4)"
       },
       {
         "data": "2027-04-06",
